@@ -10,13 +10,14 @@ function loadLabelsPictures () {
     const labels = ["Joseph"];
     return Promise.all(labels.map(async function (label) {
         const descriptions = [];
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 3; i++) {
             console.log(i);
             console.log('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
             const image = await faceapi.fetchImage('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
             const detections = await faceapi.detectSingleFace(image).withFaceLandmarks().withFaceDescriptor();
             console.log(detections);
-            descriptions.push(detections.descriptor);
+            if (detections !== undefined)
+                descriptions.push(detections.descriptor);
 
         }
         console.log(new faceapi.LabeledFaceDescriptors(label, descriptions));
