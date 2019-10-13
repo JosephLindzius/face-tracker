@@ -37,6 +37,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CRRX\Documents\becode_projects\face-tracker\assets" />
+      <recent name="C:\Users\CRRX\Documents\becode_projects\face-tracker" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -59,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570964934156</updated>
-      <workItem from="1570964935343" duration="8427000" />
+      <workItem from="1570964935343" duration="9539000" />
     </task>
     <servers />
   </component>

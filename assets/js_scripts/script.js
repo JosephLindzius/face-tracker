@@ -3,10 +3,10 @@
 const webcamVideo = document.getElementById('webcamVideo');
 //STEP THREE
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri("./models"),
-    faceapi.nets.faceLandmark68Net.loadFromUri("./models"),
-    faceapi.nets.faceRecognitionNet.loadFromUri("./models"),
-    faceapi.nets.faceExpressionNet.loadFromUri("./models")
+    faceapi.nets.tinyFaceDetector.loadFromUri("./"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("./"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("./"),
+    faceapi.nets.faceExpressionNet.loadFromUri("./")
 ]).then(getVideo);
 
 
@@ -37,6 +37,8 @@ webcamVideo.addEventListener('play', function(){
         console.log(detections);
     }, 100)
 });
+
+console.log(faceapi.nets);
 
 
 
