@@ -5,10 +5,10 @@
       <change afterPath="$PROJECT_DIR$/assets/images/Joseph/20191013_204204.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/images/Joseph/20191013_204211.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/images/Joseph/20191013_204218.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/faceIndex.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/indexExample.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js_scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/script.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570964934156</updated>
-      <workItem from="1570964935343" duration="19786000" />
+      <workItem from="1570964935343" duration="20066000" />
     </task>
     <servers />
   </component>

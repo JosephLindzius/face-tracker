@@ -33,7 +33,7 @@ function loadLabelsPictures () {
     const labels = ["Joseph"];
     return Promise.all(labels.map(async function () {
         for (let i = 1; i <= 3; i++) {
-            const img = await faceapi.fetchImage()
+            const img = await faceapi.fetchImage("https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/Joseph/20191013_204204.jpg" )
         }
     }))
 }
