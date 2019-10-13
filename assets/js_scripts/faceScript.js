@@ -18,7 +18,6 @@ function loadLabelsPictures () {
             console.log(detections);
             if (detections !== undefined)
                 descriptions.push(detections.descriptor);
-
         }
         console.log(new faceapi.LabeledFaceDescriptors(label, descriptions));
         return new faceapi.LabeledFaceDescriptors(label, descriptions);
