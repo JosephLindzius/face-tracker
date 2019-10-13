@@ -34,6 +34,7 @@ webcamVideo.addEventListener('play', function(){
             new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
         const resizeDetections = faceapi.resizeResults(detections, displaySize);
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+
         faceapi.draw.drawDetections(canvas, resizeDetections);
         faceapi.draw.drawFaceLandmarks(canvas, resizeDetections);
         faceapi.draw.drawFaceExpressions(canvas, resizeDetections);
