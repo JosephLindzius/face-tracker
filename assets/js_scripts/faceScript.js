@@ -35,14 +35,14 @@ async function beginScript () {
     imageUpload.addEventListener('change', async function () {
         const image = await faceapi.bufferToImage(imageUpload.files[0]);
         wrapper.append(image);
-        const canvas = faceapi.createCanvasFromMedia(image);
+        const canvas = await faceapi.createCanvasFromMedia(image);
         wrapper.append(canvas);
         const displaySize = { width: image.width, height: image.height };
         faceapi.matchDimensions(canvas, displaySize);
         const detections = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors();
         wrapper.append("faces found:" + detections.length);
         //displays to perfect size
-        const resizeDetections = faceapi.resizeResults(detections, displaySize);
+        const resizeDetections = await faceapi.resizeResults(detections, displaySize);
         const results = resizeDetections.map(d => faceMatcher.findBestMatch(d.descriptor));
         results.forEach(function (result, i){
             const box = resizeDetections[i].detection.box;
