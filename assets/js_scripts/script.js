@@ -18,7 +18,7 @@ function getVideo () {
 }
 
 webcamVideo.addEventListener('play', function(){
-    console.log("I am playing!")
+    alert("I am playing!");
 });
 
 
