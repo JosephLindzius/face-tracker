@@ -3,10 +3,10 @@
 const webcamVideo = document.getElementById('webcamVideo');
 //STEP THREE
 Promise.all([
-    faceapi.nets.tinyFaceDetector.loadFromUri("../../assets/models"),
-    faceapi.nets.faceLandmark68Net.loadFromUri("../../assets/models"),
-    faceapi.nets.faceRecognitionNet.loadFromUri("../../assets/models"),
-    faceapi.nets.faceExpressionNet.loadFromUri("../../assets/models")
+    faceapi.nets.tinyFaceDetector.loadFromUri("../models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("../models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("../models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("../models")
 ]).then(getVideo);
 
 
@@ -16,21 +16,24 @@ function getVideo () {
         .then(function(stream) {
             webcamVideo.srcObject = stream;
         })
-        .catch(function(err) {
-            console.error("err");
+        .catch(function(error) {
+            console.error(error);
         });
 }
 //STEP TWO
 webcamVideo.addEventListener('play', function(){
-    alert("I am playing!");
+    console.log("I am playing!");
     //STEP FIVE
     const canvas = faceapi.createCanvasFromMedia(webcamVideo);
     document.body.append(canvas);
-    const DISPLAY_SIZE = { width: webcamVideo.width, height: webcamVideo.height };
+    const displaySize = { width: webcamVideo.width, height: webcamVideo.height };
+    faceapi.matchDimensions(canvas, displaySize);
     //STEP FOUR
     setInterval(async function () {
-        const detections = await faceapi.detectAllFaces(webcamVideo,
-            new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        const detections = await faceapi.detectAllFaces(webcamVideo, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        const resizeDetections = faceapi.resizeResults(detections, displaySize);
+        faceapi.draw.drawDetections(canvas, resizeDetections);
+        canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
         console.log(detections);
     }, 100)
 });
