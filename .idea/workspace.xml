@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fcd81f1-8ae4-432f-b7c9-c398e659e18b" name="Default Changelist" comment="">
+    <list default="true" id="2fcd81f1-8ae4-432f-b7c9-c398e659e18b" name="Default Changelist" comment="entered git">
       <change afterPath="$PROJECT_DIR$/assets/images/Joseph/j2.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/images/Joseph/j3.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/images/mil.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/faceIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexExample.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js_scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexExample.html" beforeDir="false" afterPath="$PROJECT_DIR$/indexExample.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570964934156</updated>
-      <workItem from="1570964935343" duration="26874000" />
+      <workItem from="1570964935343" duration="27177000" />
     </task>
     <servers />
   </component>
@@ -102,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="entered git" />
+    <option name="LAST_COMMIT_MESSAGE" value="entered git" />
   </component>
 </project>
