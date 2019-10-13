@@ -8,9 +8,9 @@ Promise.all([
 
 function loadLabelsPictures () {
     const labels = ["Joseph"];
+    const descriptions = [];
     return Promise.all(labels.map(async function (label) {
-        const descriptions = [];
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             console.log(i);
             console.log('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
             const image = await faceapi.fetchImage('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
@@ -31,8 +31,8 @@ async function beginScript () {
     wrapper.addClassName = "wrapper";
     wrapper.style.position = "absolute";
     document.body.append(wrapper);
-   // const labeledDescriptors = await loadLabelsPictures();
-    //const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.6);
+     const labeledDescriptors = await loadLabelsPictures();
+    const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.6);
     imageUpload.addEventListener('change', async function () {
         const image = await faceapi.bufferToImage(imageUpload.files[0]);
         wrapper.append(image);
@@ -44,10 +44,11 @@ async function beginScript () {
         wrapper.append("faces found:" + detections.length);
         //displays to perfect size
         const resizeDetections = faceapi.resizeResults(detections, displaySize);
-        //const results = resizeDetections.map(d => faceMatcher.findBestMatch(d.descriptor));
-        resizeDetections.forEach(function (result, i){
+        const results = resizeDetections.map(d => faceMatcher.findBestMatch(d.descriptor));
+        results.forEach(function (result, i){
             const box = resizeDetections[i].detection.box;
-            const drawBox = new faceapi.draw.DrawBox(box, {label:"face"});
+            const drawBox = new faceapi.draw.DrawBox(box, {label: result});
+            console.log(drawBox);
             drawBox.draw(canvas);
         });
         console.log(await loadLabelsPictures());
