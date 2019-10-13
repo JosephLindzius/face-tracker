@@ -19,6 +19,11 @@ function getVideo () {
 
 webcamVideo.addEventListener('play', function(){
     alert("I am playing!");
+    setInterval(async function () {
+        const detections = await faceapi.detectAllFaces(webcamVideo,
+            new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        console.log(detections);
+    }, 100)
 });
 
 
