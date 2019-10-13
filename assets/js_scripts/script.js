@@ -30,10 +30,12 @@ webcamVideo.addEventListener('play', function(){
     faceapi.matchDimensions(canvas, displaySize);
     //STEP FOUR
     setInterval(async function () {
-        const detections = await faceapi.detectAllFaces(webcamVideo, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
+        const detections = await faceapi.detectAllFaces(webcamVideo,
+            new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
         const resizeDetections = faceapi.resizeResults(detections, displaySize);
-        faceapi.draw.drawDetections(canvas, resizeDetections);
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+        faceapi.draw.drawDetections(canvas, resizeDetections);
+        faceapi.draw.drawFaceExpressions(canvas, resizeDetections);
         console.log(detections);
     }, 100)
 });
