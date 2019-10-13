@@ -6,12 +6,32 @@ Promise.all([
     faceapi.nets.ssdMobilenetv1.loadFromUri('./')
 ]).then(beginScript);
 
-function beginScript () {
+function loadLabelsPictures () {
+    const labels = ["Joseph"];
+    return Promise.all(labels.map(async function (label) {
+        const descriptions = [];
+        for (let i = 0; i < 2; i++) {
+            console.log(i);
+            console.log('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
+            const image = await faceapi.fetchImage('https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/' + label + '/' + 'j' + i + '.jpg' );
+            const detections = await faceapi.detectSingleFace(image).withFaceLandmarks().withFaceDescriptor();
+            console.log(detections);
+            descriptions.push(detections.descriptor);
+
+        }
+        console.log(new faceapi.LabeledFaceDescriptors(label, descriptions));
+        return new faceapi.LabeledFaceDescriptors(label, descriptions);
+    }))
+}
+
+async function beginScript () {
     document.body.append('Loaded');
     const wrapper = document.createElement('div');
     wrapper.addClassName = "wrapper";
     wrapper.style.position = "absolute";
     document.body.append(wrapper);
+   // const labeledDescriptors = await loadLabelsPictures();
+    //const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.6);
     imageUpload.addEventListener('change', async function () {
         const image = await faceapi.bufferToImage(imageUpload.files[0]);
         wrapper.append(image);
@@ -23,20 +43,14 @@ function beginScript () {
         wrapper.append("faces found:" + detections.length);
         //displays to perfect size
         const resizeDetections = faceapi.resizeResults(detections, displaySize);
-        resizeDetections.forEach(function (detection) {
-            const box = detection.detection.box;
-            const drawBox = new faceapi.draw.DrawBox(box, {label: "face found"});
+        //const results = resizeDetections.map(d => faceMatcher.findBestMatch(d.descriptor));
+        resizeDetections.forEach(function (result, i){
+            const box = resizeDetections[i].detection.box;
+            const drawBox = new faceapi.draw.DrawBox(box, {label:"face"});
             drawBox.draw(canvas);
         });
+        console.log(await loadLabelsPictures());
 
-function loadLabelsPictures () {
-    const labels = ["Joseph"];
-    return Promise.all(labels.map(async function () {
-        for (let i = 1; i <= 3; i++) {
-            const img = await faceapi.fetchImage("https://raw.githubusercontent.com/JosephLindzius/face-tracker/master/assets/images/Joseph/20191013_204204.jpg" )
-        }
-    }))
-}
 
 
 
