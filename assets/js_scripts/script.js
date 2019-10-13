@@ -1,5 +1,11 @@
 const webcamVideo = document.getElementById('webcamVideo');
 
+Promise.all([
+   faceapi.nets.tinyFaceDetector.loadFromUri("./models"),
+    faceapi.nets.faceLandmark68Net.loadFromUri("./models"),
+    faceapi.nets.faceRecognitionNet.loadFromUri("./models"),
+    faceapi.nets.faceExpressionNet.loadFromUri("./models")
+]).then(getVideo);
 
 function getVideo () {
     navigator.mediaDevices.getUserMedia({ video: {} })
@@ -7,8 +13,13 @@ function getVideo () {
             webcamVideo.srcObject = stream;
         })
         .catch(function(err) {
-            console.error(err);
+            console.error("err");
         });
 }
 
-getVideo();
+webcamVideo.addEventListener('play', function(){
+    console.log("I am playing!")
+});
+
+
+
