@@ -10,7 +10,7 @@ Found this great AI/API from Github user [justadudewhohacks](https://github.com/
 
 Tutorial from [WebDevSimplified](https://www.youtube.com/watch?v=CVClHLwv-4I) 
     
-    Please note that the way the webcam is set up in this video did not work and I needed to do this differently.  
+    Please note that the way the webcam is set up in this video did not work at first.  Refer to my code if needed.  
 ### Known Issue
 
 The live webcam works without known bugs
