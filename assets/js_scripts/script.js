@@ -39,6 +39,7 @@ webcamVideo.addEventListener('play', function(){
         faceapi.draw.drawFaceLandmarks(canvas, resizeDetections);
         faceapi.draw.drawFaceExpressions(canvas, resizeDetections);
         console.log(detections);
+        consoloe.log(detections.expression);
     }, 100)
 });
 
