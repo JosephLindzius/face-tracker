@@ -1,6 +1,7 @@
 # face-tracker
 Javascript FaceTracker
 
+![me](./assets/images/me.png)
 [Check out webcam live site here](https://josephlindzius.github.io/face-tracker/index.html)
 
 [Check out face finder here](https://josephlindzius.github.io/face-tracker/faceIndex.html)
@@ -13,7 +14,7 @@ Tutorial from [WebDevSimplified](https://www.youtube.com/watch?v=CVClHLwv-4I)
     Please note that the way the webcam is set up in this video did not work at first.  Refer to my code if needed.  
 ### Known Issue
 
-The live webcam works without known bugs
+The live webcam works best loaded in good lighting and reasonable processing power it seems but it is to be expected with running such a script.
 
 For faceIndex.html seems to have a looping problem where it is not reading all pictures before processing but rather gives back undefined.
 
