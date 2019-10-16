@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fcd81f1-8ae4-432f-b7c9-c398e659e18b" name="Default Changelist" comment="entered git">
-      <change afterPath="$PROJECT_DIR$/assets/images/Joseph/j2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Joseph/j3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/mil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/faceIndex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js_scripts/becode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js_scripts/watch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indexBecode.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/indexWatch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js_scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexExample.html" beforeDir="false" afterPath="$PROJECT_DIR$/indexExample.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,14 +39,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/Joseph" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,6 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570964934156</updated>
       <workItem from="1570964935343" duration="28348000" />
+      <workItem from="1571049336604" duration="5126000" />
     </task>
     <servers />
   </component>
@@ -98,7 +94,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
