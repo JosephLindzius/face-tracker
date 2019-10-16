@@ -2,6 +2,7 @@
 Javascript FaceTracker
 
 ![me](./assets/images/me.png)
+
 [Check out webcam live site here](https://josephlindzius.github.io/face-tracker/index.html)
 
 [Check out face finder here](https://josephlindzius.github.io/face-tracker/faceIndex.html)
