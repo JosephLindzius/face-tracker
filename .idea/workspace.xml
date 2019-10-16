@@ -7,6 +7,15 @@
       <change afterPath="$PROJECT_DIR$/indexBecode.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/indexWatch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Joseph/j1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/faceScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js_scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js_scripts/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexExample.html" beforeDir="false" afterPath="$PROJECT_DIR$/indexExample.html" afterDir="false" />
+>>>>>>> b23826c1426d63133cb297e27a47c7b554c06af0
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +90,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570964934156</updated>
+<<<<<<< HEAD
       <workItem from="1570964935343" duration="28348000" />
       <workItem from="1571049336604" duration="5126000" />
+=======
+      <workItem from="1570964935343" duration="29787000" />
+>>>>>>> b23826c1426d63133cb297e27a47c7b554c06af0
     </task>
     <servers />
   </component>
